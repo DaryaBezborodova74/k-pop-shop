@@ -229,13 +229,10 @@ main {
     position: relative;
 }
 
-.catalog__btn::after {
-    content: "\F7AE";
-    font-family: bootstrap-icons;
-    color: var(--color-magenta);
-    position: absolute;
-    right: -5px;
-    bottom: -5px;
+.catalog__btn:hover,
+.catalog__btn:focus,
+.catalog__btn:active {
+    background-color: var(--color-magenta);
 }
 
 .catalog__btn i {
@@ -275,10 +272,11 @@ main {
     font-size: 0.9rem;
     font-weight: 600;
     margin-top: 7px;
+    width: 80px;
 }
 
 .remainder {
-    background-color: var(--color-magenta);
+    background-color: var(--color-prics);
     color: var(--color-white);
     border-radius: 7px;
     padding: 5px 10px;
