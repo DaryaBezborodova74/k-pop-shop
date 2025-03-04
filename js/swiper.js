@@ -2,7 +2,7 @@ const swiperCard = new Swiper('.swiper-card', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
-    slidesPreView: 'auto',
+    slidesPerView: 'auto',
     // If we need pagination
     pagination: {
       el: '.swiper-pagination',

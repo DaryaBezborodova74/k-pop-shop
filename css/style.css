@@ -100,25 +100,25 @@ main {
     margin: 15px;
 }
 
-@media (max-widht:1440px) {
+@media (max-wight:1440px) {
     .catalog__grid {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media (max-widht:992px) {
+@media (max-wight:992px) {
     .catalog__grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (max-widht:768px) {
+@media (max-wight:768px) {
     .catalog__filter {
         display: none;
     }
 }
 
-@media (max-widht:567px) {
+@media (max-wight:567px) {
     .catalog__grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -143,13 +143,14 @@ main {
     flex-direction: column;
 }
 
-.swiper-card {
+.swiper-card{
     width: 100%;
     aspect-ratio: 1;
 }
 
 .catalog__img {
-    
+    width: 100%;
+    aspect-ratio: 1;
     border-radius: 15px;
     object-fit: cover;
 }
@@ -247,7 +248,7 @@ main {
 
 .img__wrapper {
     position: relative;
-    width: 300px;
+    /* width: 300px;  */
 }
 
 .fav-btn {
@@ -362,3 +363,136 @@ main {
   .hide-filter {
     display: none;
   }
+
+/*------------------filter------------------------*/
+/*------------------color------------------------*/
+
+.catalog__filter {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.filter-color {
+    display: flex;
+    gap: 15px;
+    padding-top: 20px;
+}
+
+.filter-color__item {
+    flex-shrink: 0;
+}
+
+.filter-color__checkbox {
+    display: none;
+}
+
+.filter-color__label {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    outline: var(--color-grey) 0px solid;
+    outline-offset: 0px;
+    transition: outline 0.2s, outline-offset 0.2s;
+}
+
+.filter-color__label:hover,
+.filter-color__label:focus {
+    outline: var(--color-grey) 2px solid;
+    outline-offset: 3px;
+    cursor: pointer;
+}
+
+.filter-color__label:active {
+    background-color: #ffffff98;
+}
+
+.filter-color__checkbox:checked+.filter-color__label {
+    outline: var(--color-grey) 2px solid;
+    outline-offset: 3px;
+}
+
+.filter-color__label::after {
+    content: "";
+    transition: transform 0.2;
+}
+
+.filter-color__checkbox:checked+.filter-color__label::after,
+.filter-color__label[aria-checked="true"]::after {
+    content: "\F26E";
+    font-family: "bootstrap-icons";
+    color: var(--color-grey);
+    transform: scale(2);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+/*------------------radio------------------------*/
+
+input[type="radio"] {
+    appearance: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: #EEEEEE solid 1.5px;
+    background-color: #EBF7FF;
+    transition: transform 0.2s,
+                background-color 0.2s,
+                outline 0.2s,
+                outline-offset 0.2s;
+}
+
+input[type="radio"]:checked {
+    transform: scale(0.6);
+    background-color: var(--color-magenta);
+    outline: 1.5px solid var(--color-magenta);
+    outline-offset: 6px;
+}
+
+input[type="radio"]:disabled {
+    border: var(--color-magenta) solid 1.5 px;
+}
+
+input[type="radio"]:disabled:checked {
+    transform: scale(0.6);
+    background-color: var(--color-magenta);
+    outline: 1.5px solid var(--color-magenta);
+    outline-offset: 6px;
+}
+
+/*------------------checkbox------------------------*/
+
+input[type="checkbox"] {
+    appearance: none;
+    border-radius: 3px;
+    width: 20px;
+    height: 20px;
+    border: #EEEEEE solid 1.5px;
+    background-color: #EBF7FF;
+    transition: transform 0.2s,
+                background-color 0.2s,
+                outline 0.2s,
+                outline-offset 0.2s;
+}
+
+input[type="checkbox"]:checked {
+    transform: scale(0.6);
+    background-color: var(--color-magenta);
+    outline: 1.5px solid var(--color-magenta);
+    outline-offset: 6px;
+}
+
+input[type="checkbox"]:disabled {
+    border: var(--color-magenta) solid 1.5 px;
+}
+
+input[type="checkbox"]:disabled:checked {
+    transform: scale(0.6);
+    background-color: var(--color-magenta);
+    outline: 1.5px solid var(--color-magenta);
+    outline-offset: 6px;
+}

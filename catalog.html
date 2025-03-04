@@ -20,6 +20,7 @@
 <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script defer src="js/swiper.js"></script>
 <script defer src="js/aos.js"></script>
+<script defer src="js/checkbox.js"></script>
 </head>
 <body>
     <header>
@@ -28,7 +29,74 @@
     <main>
         <section>
             <div class="container catalog">
-                <div class="catalog__filter"></div>
+                <div class="catalog__filter">
+                    <h3>Цвет</h3>
+                    <div class="filter-color">
+                        <div class="filter-color__item">
+                            <input class="filter-color__checkbox" type="checkbox" name="color-black" id="color-black">
+                            <label tabindex="0" class="filter-color__label" for="color-black" aria-label="чёрный цвет" id="color-black-label" role="checkbox" aria-checked="false" style="background-color: black;"></label>
+                        </div>
+                        <div>
+                            <input class="filter-color__checkbox" type="checkbox" name="color-red" id="color-red">
+                            <label tabindex="0" class="filter-color__label" for="color-red" aria-label="красный цвет" id="color-red-label" role="checkbox" aria-checked="false" style="background-color: #B42529;"></label>
+                        </div>
+                        <div>
+                            <input class="filter-color__checkbox" type="checkbox" name="color-pink" id="color-pink">
+                            <label tabindex="0" class="filter-color__label" for="color-pink" aria-label="розовый цвет" id="color-pink-label" role="checkbox" aria-checked="false" style="background-color: #CD649C;"></label>
+                        </div>
+                        <div>
+                            <input class="filter-color__checkbox" type="checkbox" name="color-yellow" id="color-yellow">
+                            <label tabindex="0" class="filter-color__label" for="color-yellow" aria-label="жёлтый цвет" id="color-yellow-label" role="checkbox" aria-checked="false" style="background-color: #FFBD20;"></label>
+                        </div>
+                        <div>
+                            <input class="filter-color__checkbox" type="checkbox" name="color-white" id="color-white">
+                            <label tabindex="0" class="filter-color__label" for="color-white" aria-label="жёлтый цвет" id="color-white-label" role="checkbox" aria-checked="false" style="background-color: #F7F7F7;"></label>
+                        </div>
+                    </div>
+                    <h3>Срок доставки</h3>
+                    <div class="filter-deliverytime">
+                        <div class="filter-deliverytime__item">
+                            <input class="filter-deliverytime__radio" type="radio" name="deliverytime" id="deliverytime-none">
+                            <label class="filter-deliverytime__label" for="deliverytime-none" tabindex="0" id="deliverytime-none-label" aria-label="Неважно" role="radio" aria-checked="false">Неважно</label>
+                        </div>
+                        <div class="filter-deliverytime__item">
+                            <input class="filter-deliverytime__radio" type="radio" name="deliverytime" id="deliverytime-5">
+                            <label class="filter-deliverytime__label" for="deliverytime-5" tabindex="0" id="deliverytime-5-label" aria-label="До 5 дней" role="radio" aria-checked="false">До 5 дней</label>
+                        </div>
+                        <div class="filter-deliverytime__item">
+                            <input class="filter-deliverytime__radio" type="radio" name="deliverytime" id="deliverytime-15">
+                            <label class="filter-deliverytime__label" for="deliverytime-15" tabindex="0" id="deliverytime-15-label" aria-label="До 15 дней" role="radio" aria-checked="false">До 15 дней</label>
+                        </div>
+                        <div class="filter-deliverytime__item">
+                            <input class="filter-deliverytime__radio" type="radio" name="deliverytime" id="deliverytime-30">
+                            <label class="filter-deliverytime__label" for="deliverytime-30" tabindex="0" id="deliverytime-30-label" aria-label="Месяц и больше" role="radio" aria-checked="false">Месяц и больше</label>
+                        </div>
+                    </div>
+                    <h3>Тип товара</h3>
+                    <div class="filter-type">
+                        <div class="filter-type__item">
+                            <input class="filter-type__checkbox" type="checkbox" name="type-album" id="type-album">
+                            <label class="filter-type__label" for="type-album" tabindex="0" id="type-album-label" aria-label="тип альбом" role="checkbox" aria-checked="false">Альбом</label>
+                        </div>
+                        <div class="filter-type__item">
+                            <input class="filter-type__checkbox" type="checkbox" name="type-cards" id="type-cards">
+                            <label class="filter-type__label" for="type-cards" tabindex="0" id="type-cards-label" aria-label="тип карты" role="checkbox" aria-checked="false">Карты</label>
+                        </div>
+                        <div class="filter-type__item">
+                            <input class="filter-type__checkbox" type="checkbox" name="type-plush" id="type-plush">
+                            <label class="filter-type__label" for="type-plush" tabindex="0" id="type-plush-label" aria-label="тип плюши" role="checkbox" aria-checked="false">Плюш</label>
+                        </div>
+                        <div class="filter-type__item">
+                            <input class="filter-type__checkbox" type="checkbox" name="type-lightstick" id="type-lightstick">
+                            <label class="filter-type__label" for="type-lightstick" tabindex="0" id="type-lightstick-label" aria-label="тип лайтстик" role="checkbox" aria-checked="false">Лайтстик</label>
+                        </div>
+                        <div class="filter-type__item">
+                            <input class="filter-type__checkbox" type="checkbox" name="type-staff" id="type-staff">
+                            <label class="filter-type__label" for="type-staff" tabindex="0" id="type-staff-label" aria-label="тип стафф" role="checkbox" aria-checked="false">Стафф</label>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="catalog__content">
                     <div class="catalog__sort"></div>
                     <div class="catalog__grid">
@@ -955,18 +1023,18 @@
                     </div>
                 </div>
             </div>
+            <div class="pagination-cover">
+                <ul class="pagination">
+                    <li class="pagination-item item-prev"><a href="#"><i class="bi bi-arrow-left"></i></a></li>
+                    <li class="pagination-item active"><a href="#">1</a></li>
+                    <li class="pagination-item"><a href="#">2</a></li>
+                    <li class="pagination-item"><a href="#">3</a></li>
+                    <li class="pagination-item"><a href="#">4</a></li>
+                    <li class="pagination-item"><a href="#">5</a></li>
+                    <li class="pagination-item item-next"><a href="#"><i class="bi bi-arrow-right"></i></a></li>
+                </ul>
+            </div>
         </section>
-        <div class="pagination-cover">
-            <ul class="pagination">
-                <li class="pagination-item item-prev"><a href="#"><i class="bi bi-arrow-left"></i></a></li>
-                <li class="pagination-item active"><a href="#">1</a></li>
-                <li class="pagination-item"><a href="#">2</a></li>
-                <li class="pagination-item"><a href="#">3</a></li>
-                <li class="pagination-item"><a href="#">4</a></li>
-                <li class="pagination-item"><a href="#">5</a></li>
-                <li class="pagination-item item-next"><a href="#"><i class="bi bi-arrow-right"></i></a></li>
-            </ul>
-        </div>
     </main>
     <footer>
 
