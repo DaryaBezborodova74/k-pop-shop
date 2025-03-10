@@ -24,12 +24,69 @@
 </head>
 <body>
     <header>
-        <h1>Интернет-магазин</h1>
+        <div class="header__top">
+            <div class="logo">
+                <img src="img/Chosen Ones.png" alt="Chosen Ones logo" class="logo__img">
+            </div>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+                    <li class="nav__item"><a href="catalog.html" class="nav__link">Каталог</a></li>
+                    <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+                    <li class="nav__item"><a href="cart.html" class="nav__link"><i class="bi-basket2-fill"></i></a></li>
+                    <li class="nav__item"><a href="like.html" class="nav__link"><i class="bi-heart-fill"></i></a></li>
+                    <li class="nav__item"><a href="profile.html" class="nav__link"><i class="bi-person-fill"></i></a></li>
+                    <!-- <li class="nav__item"><a href="cart.html" class="nav__link"><i class="bi bi-basket2-fill"></i>Корзина</a></li>
+                    <li class="nav__item"><a href="like.html" class="nav__link"><i class="bi bi-heart-fill"></i>Лайк</a></li>
+                    <li class="nav__item"><a href="profile.html" class="nav__link"><i class="bi bi-person-fill"></i>Профиль</a></li> -->
+                </ul>
+            </nav>
+        </div>
+        <div class="banner">
+            <img src="img/stray-kids-banner.png" alt="Stray Kids group photo" class="banner__img">
+            <div class="banner__content">
+                <h1 class="banner__title">Stray Kids</h1>
+            </div>
+        </div>
     </header>
     <main>
         <section>
             <div class="container catalog">
                 <div class="catalog__filter">
+                    <h3>Группы</h3>
+                    <div class="filter-dropdown">
+                        <details>
+                            <summary>Мужские группы</summary>
+                            <div class="filter-dropdown__list">
+                                <div class="filter-dropdown__item">BTS</div>
+                                <div class="filter-dropdown__item">Stray Kids</div>
+                                <div class="filter-dropdown__item">NCT</div>
+                                <div class="filter-dropdown__item">SEVENTEEN</div>
+                                <div class="filter-dropdown__item">EXO</div>
+                            </div>
+                        </details>
+                        
+                        <details>
+                            <summary>Женские группы</summary>
+                            <div class="filter-dropdown__list">
+                                <div class="filter-dropdown__item">BLACKPINK</div>
+                                <div class="filter-dropdown__item">TWICE</div>
+                                <div class="filter-dropdown__item">IVE</div>
+                                <div class="filter-dropdown__item">NewJeans</div>
+                                <div class="filter-dropdown__item">Red Velvet</div>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>Смешанные группы</summary>
+                            <div class="filter-dropdown__list">
+                                <div class="filter-dropdown__item">KARD</div>
+                                <div class="filter-dropdown__item">AKMU</div>
+                                <div class="filter-dropdown__item">Triple H</div>
+                                <div class="filter-dropdown__item">K/DA</div>
+                            </div>
+                        </details>
+                    </div>
                     <h3>Цвет</h3>
                     <div class="filter-color">
                         <div class="filter-color__item">
@@ -96,9 +153,19 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="catalog__content">
-                    <div class="catalog__sort"></div>
+                    <div class="catalog__sort">
+                        <div class="catalog__sort-item">
+                            <!-- <label for="sort-select">Сортировать:</label> -->
+                            <select class="sort-select" id="sort-select">
+                                <option value="popular-desc">сортировка</option>
+                                <option value="popular-desc">сначала старые</option>
+                                <option value="popular-asc">сначала новые</option>
+                                <option value="price-desc">по возрастанию цены</option>
+                                <option value="price-asc">по убыванию цены</option>
+                            </select>
+                        </div>
+                    </div>
                     <div class="catalog__grid">
                         <div class="catalog__card" data-aos="zoom-in">
                             <div class="img__wrapper">
@@ -106,9 +173,56 @@
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
                                       <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
+                                    </div>
+                                    <!-- If we need pagination -->
+                                    <div class="swiper-pagination"></div>
+                                    
+                                  </div>
+                                  <i class="fav-btn bi bi-heart-fill"></i>
+                                  <div class="catalog__promotions">
+                                      <div class="remainder">
+                                          Бесплатная доставка из Кореи
+                                      </div>
+                                      <div class="sales">
+                                          <i class="bi bi-fire"></i> Скидка
+                                      </div>
+                                
+                                </div>
+                            </div>
+                            <div class="catalog__price">
+                                <span class="price-now">2 310 &#8381</span>
+                                <span class="price-early">2 800 &#8381</span>
+                                <span class="price-sale">-34%</span>
+                            </div>
+                            <div class="catalog__brand">
+                                <span class="catalog__brand_1"><i class="bi bi-check-circle-fill"></i> Stray kids </span>
+                                <span class="catalog__brand_2"><a href="#" class="catalog__title"><h3>"樂-STAR" (Rock Star) Headliner ver. </h3></a></span>
+                            </div>
+                             
+                            <div class="catalog__feedback">
+                                <div class="catalog__raiting">
+                                    <i class="bi bi-star-fill"></i>
+                                    <span>4,9</span>
+                            </div>
+                            <div class="catalog__review">
+                                <i class="bi bi-chat-fill"></i>
+                                <span>1 951 отзыва</span>
+                            </div>
+                            </div>
+                            <button class="catalog__btn">В корзину</button>
+                        </div>
+                        <div class="catalog__card" data-aos="zoom-in">
+                            <div class="img__wrapper">
+                                <div class="swiper swiper-card">
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                      <!-- Slides -->
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
                                     </div>
                                     <!-- If we need pagination -->
                                     <div class="swiper-pagination"></div>
@@ -152,9 +266,9 @@
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
                                       <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
                                     </div>
                                     <!-- If we need pagination -->
                                     <div class="swiper-pagination"></div>
@@ -198,9 +312,9 @@
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
                                       <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
                                     </div>
                                     <!-- If we need pagination -->
                                     <div class="swiper-pagination"></div>
@@ -244,9 +358,9 @@
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
                                       <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
                                     </div>
                                     <!-- If we need pagination -->
                                     <div class="swiper-pagination"></div>
@@ -290,9 +404,9 @@
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
                                       <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
                                     </div>
                                     <!-- If we need pagination -->
                                     <div class="swiper-pagination"></div>
@@ -336,9 +450,9 @@
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
                                       <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
                                     </div>
                                     <!-- If we need pagination -->
                                     <div class="swiper-pagination"></div>
@@ -382,9 +496,9 @@
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
                                       <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
                                     </div>
                                     <!-- If we need pagination -->
                                     <div class="swiper-pagination"></div>
@@ -428,9 +542,9 @@
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
                                       <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
                                     </div>
                                     <!-- If we need pagination -->
                                     <div class="swiper-pagination"></div>
@@ -474,9 +588,9 @@
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
                                       <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
                                     </div>
                                     <!-- If we need pagination -->
                                     <div class="swiper-pagination"></div>
@@ -520,9 +634,9 @@
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
                                       <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
                                     </div>
                                     <!-- If we need pagination -->
                                     <div class="swiper-pagination"></div>
@@ -566,9 +680,9 @@
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
                                       <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
                                     </div>
                                     <!-- If we need pagination -->
                                     <div class="swiper-pagination"></div>
@@ -612,9 +726,9 @@
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
                                       <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
                                     </div>
                                     <!-- If we need pagination -->
                                     <div class="swiper-pagination"></div>
@@ -658,9 +772,9 @@
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
                                       <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
                                     </div>
                                     <!-- If we need pagination -->
                                     <div class="swiper-pagination"></div>
@@ -704,9 +818,9 @@
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
                                       <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
                                     </div>
                                     <!-- If we need pagination -->
                                     <div class="swiper-pagination"></div>
@@ -750,9 +864,9 @@
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
                                       <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
                                     </div>
                                     <!-- If we need pagination -->
                                     <div class="swiper-pagination"></div>
@@ -796,9 +910,9 @@
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
                                       <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
                                     </div>
                                     <!-- If we need pagination -->
                                     <div class="swiper-pagination"></div>
@@ -842,9 +956,9 @@
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
                                       <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
                                     </div>
                                     <!-- If we need pagination -->
                                     <div class="swiper-pagination"></div>
@@ -888,9 +1002,9 @@
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
                                       <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
                                     </div>
                                     <!-- If we need pagination -->
                                     <div class="swiper-pagination"></div>
@@ -934,55 +1048,9 @@
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
                                       <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                    </div>
-                                    <!-- If we need pagination -->
-                                    <div class="swiper-pagination"></div>
-                                  </div>
-                                
-                                <i class="fav-btn bi bi-heart-fill"></i>
-                                <div class="catalog__promotions">
-                                    <div class="remainder">
-                                        Бесплатная доставка из Кореи
-                                    </div>
-                                    <div class="sales">
-                                        <i class="bi bi-fire"></i> Скидка
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="catalog__price">
-                                <span class="price-now">2 310 &#8381</span>
-                                <span class="price-early">2 800 &#8381</span>
-                                <span class="price-sale">-34%</span>
-                            </div>
-                            <div class="catalog__brand">
-                                <span class="catalog__brand_1"><i class="bi bi-check-circle-fill"></i> Stray kids </span>
-                                <span class="catalog__brand_2"><a href="#" class="catalog__title"><h3>"樂-STAR" (Rock Star) Headliner ver. </h3></a></span>
-                            </div>
-                             
-                            <div class="catalog__feedback">
-                                <div class="catalog__raiting">
-                                    <i class="bi bi-star-fill"></i>
-                                    <span>4,9</span>
-                            </div>
-                            <div class="catalog__review">
-                                <i class="bi bi-chat-fill"></i>
-                                <span>1 951 отзыва</span>
-                            </div>
-                            </div>
-                            <button class="catalog__btn">В корзину</button>
-                        </div>
-                        <div class="catalog__card" data-aos="zoom-in">
-                            <div class="img__wrapper">
-                                <div class="swiper swiper-card">
-                                    <!-- Additional required wrapper -->
-                                    <div class="swiper-wrapper">
-                                      <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/image 99.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
                                     </div>
                                     <!-- If we need pagination -->
                                     <div class="swiper-pagination"></div>
