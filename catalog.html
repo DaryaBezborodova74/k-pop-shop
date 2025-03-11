@@ -12,15 +12,17 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 
-<link
-    rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-
-<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"/>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 <script defer src="js/swiper.js"></script>
 <script defer src="js/aos.js"></script>
 <script defer src="js/checkbox.js"></script>
+<script defer src="js/choices.js"></script>
+
 </head>
 <body>
     <header>
@@ -152,11 +154,36 @@
                             <label class="filter-type__label" for="type-staff" tabindex="0" id="type-staff-label" aria-label="тип стафф" role="checkbox" aria-checked="false">Стафф</label>
                         </div>
                     </div>
+                    <h3>Цена</h3>
+                    <div class="filter-price">
+                        <div class="filter-price__range">
+                            <input type="range"
+                                    class="filter-price__slider"
+                                    id="price-range"
+                                    min="0"
+                                    max="50000"
+                                    step="500"
+                                    value="25000">
+                        <div class="filter-price__values">
+                            <span class="filter-price__min">0 ₽</span>
+                            <span class="filter-price__max">50 000 ₽</span>
+                        </div>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="catalog__content">
-                    <div class="catalog__sort">
+                    <div class="filter__section">
+                    <h3>Сортировка</h3>
+                    <select class="filter-sort-choices" name="sort" id="sort" aria-label="Сортировка товаров">
+                        <option value="old">сначала старые</option>
+                        <option value="new">сначала новые</option>
+                        <option value="price-asc">по возрастанию цены</option>
+                        <option value="price-desc">по убыванию цены</option>
+                    </select>
+                </div>
+                    <!-- <div class="catalog__sort">
                         <div class="catalog__sort-item">
-                            <!-- <label for="sort-select">Сортировать:</label> -->
                             <select class="sort-select" id="sort-select">
                                 <option value="popular-desc">сортировка</option>
                                 <option value="popular-desc">сначала старые</option>
@@ -165,7 +192,8 @@
                                 <option value="price-asc">по убыванию цены</option>
                             </select>
                         </div>
-                    </div>
+                    </div> -->
+                    
                     <div class="catalog__grid">
                         <div class="catalog__card" data-aos="zoom-in">
                             <div class="img__wrapper">
