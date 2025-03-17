@@ -83,6 +83,10 @@ main {
     font-weight: bolder;
 }
 
+.nav__link--active {
+    color: var(--color-magenta);
+}
+
 .logo__img {
     width: 200px;
     padding-left: 50px;
