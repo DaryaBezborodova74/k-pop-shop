@@ -14,7 +14,7 @@
 }
 
 *,
-*::after
+*::after,
 *::before {
     margin: 0;
     padding: 0;
@@ -74,6 +74,10 @@ main {
 }
 
 /*-----------catalog-------------*/
+h3 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
 
 .catalog {
     display: flex;
@@ -168,6 +172,7 @@ main {
     color: var(--font-size-price-now);
     font-weight: bold;
     font-size: 1.7rem;
+    margin-right: 10px;
 }
 
 .price-early {
@@ -283,7 +288,25 @@ main {
     font-size: 0.9rem;
     font-weight: 600;
     margin-top: 7px;
-    width: 80px;
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.bi-heart-fill {
+    z-index: 1;
+    background-color: var(--color-white);
+    border-radius: 100%;
+    padding-top: 6px;
+    padding-bottom: 1px;
+    padding-left: 7px;
+    padding-right: 7px;
+    aspect-ratio: 1;
+}
+
+.bi-fire {
+    padding-right: 3px;
 }
 
 .remainder {
@@ -401,7 +424,7 @@ main {
     border: var(--color-grey) solid  2px ;
     min-height: auto;
     padding: 10px;
-    width: 90%;
+    width: 100%;
 }
 
 .choices.is-open .choices__inner {
@@ -557,7 +580,7 @@ input[type="radio"] {
     border-radius: 50%;
     width: 20px;
     height: 20px;
-    border: #EEEEEE solid 1.5px;
+    border: var(--color-grey) solid 1.5px;
     background-color: #EBF7FF;
     transition: transform 0.2s,
                 background-color 0.2s,
@@ -610,7 +633,7 @@ input[type="checkbox"] {
     border-radius: 3px;
     width: 20px;
     height: 20px;
-    border: #EEEEEE solid 1.5px;
+    border: var(--color-grey) solid 1.5px;
     background-color: #EBF7FF;
     transition: transform 0.2s,
                 background-color 0.2s,
@@ -651,6 +674,7 @@ input[type="checkbox"]:disabled:checked {
 
 .nav__link--active {
     color: var(--color-magenta);
+    text-decoration: none; 
 }
 
 .logo__img {
