@@ -31,7 +31,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    background-color: rgb(247, 247, 230);
+    background-color: rgb(255, 255, 255);
     font-family: "Montserrat", serif;
 }
 
@@ -49,7 +49,7 @@ main {
     max-width: 1800px;
     margin: 0 auto;
     position: relative;
-    background-color: rgb(230, 233, 236);
+    background-color: rgb(255, 255, 255);
 }
 
 @media (max-width:1800px) {
@@ -292,6 +292,24 @@ main {
     font-weight: bold;
 }
 
+.btn--secondary-ver:hover {
+    background-color: var(--color-white);
+    color: var(--color-magenta);
+    border: 2px solid var(--color-magenta);
+}
+
+.btn--secondary-ver:active {
+    background-color: var(--color-white);
+    color: var(--color-magenta);
+    border: 2px solid var(--color-magenta);
+}
+
+.btn--secondary-ver {
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+}
+
 .btn:hover {
     opacity: 0.9;
 }
@@ -329,7 +347,7 @@ main {
 
 .product__description ul {
     list-style-position: inside;
-    padding-left: 20px;
+    padding-left: 50px;
 }
 
 .product__description li {
@@ -351,3 +369,72 @@ main {
     }
 }
 
+/*--------------------------------swiper-------------------------------*/
+
+.swiper {
+    width: 100%;
+    /* height: 500px; */
+    aspect-ratio: 1;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.swiper-wrapper {}
+    
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    aspect-ratio: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.mySwiper2 {
+
+    border-radius: 20px;
+}
+
+.mySwiper {
+    height: 150px;
+    box-sizing: border-box;
+    padding-top: 30px;
+    /* padding: 10px 30px; */
+}
+
+.mySwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.swiper-slide__bottom {
+    width: 50%;
+    aspect-ratio: 1;
+}
