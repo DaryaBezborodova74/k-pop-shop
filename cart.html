@@ -45,7 +45,106 @@
     </header>
     <main>
         <h1>Корзина</h1>
-        <form action class="cart with-coupon">
+        <div class="cart-container">
+            <div class="cart-main">
+                <div class="cart-header">
+                    <h2>Ваши товары</h2>
+                    <a href="catalog.html" class="return-link"><i class="bi bi-arrow-left"></i> Вернуться к покупкам</a>
+                </div>
+                
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <div class="item-image">
+                            <img src="img/product1.jpg" alt="Product 1">
+                        </div>
+                        <div class="item-details">
+                            <h3>Название товара 1</h3>
+                            <p class="item-price">14 990 ₽</p>
+                            <div class="quantity-controls">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="number" value="1" min="1" class="quantity-input">
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="remove-item"><i class="bi bi-trash"></i> Удалить</button>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="item-image">
+                            <img src="img/product2.jpg" alt="Product 2">
+                        </div>
+                        <div class="item-details">
+                            <h3>Название товара 2</h3>
+                            <p class="item-price">9 990 ₽</p>
+                            <div class="quantity-controls">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="number" value="1" min="1" class="quantity-input">
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="remove-item"><i class="bi bi-trash"></i> Удалить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-sidebar">
+                <div class="promo-code">
+                    <h3>Промокод</h3>
+                    <div class="promo-input">
+                        <input type="text" placeholder="Введите промокод">
+                        <button class="apply-promo">Применить</button>
+                    </div>
+                </div>
+
+                <div class="order-summary">
+                    <h3>Итого</h3>
+                    <div class="summary-row">
+                        <span>Товары (2)</span>
+                        <span>24 980 ₽</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Скидка</span>
+                        <span class="discount">-0 ₽</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>К оплате</span>
+                        <span>24 980 ₽</span>
+                    </div>
+                    <button class="checkout-btn">Оформить заказ</button>
+                </div>
+            </div>
+        </div>
+
+        <section class="bestsellers">
+            <h2>Бестселлеры</h2>
+            <div class="bestsellers-grid">
+                <div class="product-card">
+                    <img src="img/bestseller1.jpg" alt="Bestseller 1">
+                    <h3>Популярный товар 1</h3>
+                    <p class="price">12 990 ₽</p>
+                    <button class="add-to-cart">В корзину</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/bestseller2.jpg" alt="Bestseller 2">
+                    <h3>Популярный товар 2</h3>
+                    <p class="price">8 990 ₽</p>
+                    <button class="add-to-cart">В корзину</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/bestseller3.jpg" alt="Bestseller 3">
+                    <h3>Популярный товар 3</h3>
+                    <p class="price">10 990 ₽</p>
+                    <button class="add-to-cart">В корзину</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/bestseller4.jpg" alt="Bestseller 4">
+                    <h3>Популярный товар 4</h3>
+                    <p class="price">15 990 ₽</p>
+                    <button class="add-to-cart">В корзину</button>
+                </div>
+            </div>
+        </section> 
+        <!-- <form action class="cart with-coupon">
             <div class="cart__area-item">
                 <div class="cart-item">
                     <div class="item-image">
@@ -53,7 +152,7 @@
                     </div>
                 </div>
             </div>
-        </form>
+        </form> -->
     </main>
     <footer>
 
