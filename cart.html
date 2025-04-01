@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style-card.css">
+    <link rel="stylesheet" href="css/style.css">
 
 <link
     rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -44,44 +45,60 @@
         </div>
     </header>
     <main>
-        <h1>Корзина</h1>
+        <!-- <h1>Корзина</h1> -->
         <div class="cart-container">
             <div class="cart-main">
                 <div class="cart-header">
-                    <h2>Ваши товары</h2>
                     <a href="catalog.html" class="return-link"><i class="bi bi-arrow-left"></i> Вернуться к покупкам</a>
+                    <h2>Ваши товары</h2>
                 </div>
                 
                 <div class="cart-items">
                     <div class="cart-item">
                         <div class="item-image">
-                            <img src="img/product1.jpg" alt="Product 1">
+                            <img src="img/rockstar1.jpg" alt="Product 1">
                         </div>
                         <div class="item-details">
-                            <h3>Название товара 1</h3>
-                            <p class="item-price">14 990 ₽</p>
-                            <div class="quantity-controls">
-                                <button class="quantity-btn minus">-</button>
-                                <input type="number" value="1" min="1" class="quantity-input">
-                                <button class="quantity-btn plus">+</button>
+                            <h3>"樂-STAR" (Rock Star) Headliner ver.</h3>
+                            <p class="item-price">
+                                <div class="catalog__price">
+                                <span class="price-now">2 310 &#8381</span>
+                                <span class="price-early">2 800 &#8381</span>
+                                <span class="price-sale">-34%</span>
+                                </div>
+                            </p>
+                                <div class="quantity-controls">
+                                    <div class="quantity-controls-plus">
+                                        <button class="quantity-btn minus">-</button>
+                                        <input type="number" value="1" min="1" class="quantity-input">
+                                        <button class="quantity-btn plus">+</button>
+                                    </div>
+                                <button class="remove-item"><i class="bi bi-trash"></i> Удалить</button>
                             </div>
-                            <button class="remove-item"><i class="bi bi-trash"></i> Удалить</button>
                         </div>
                     </div>
 
                     <div class="cart-item">
                         <div class="item-image">
-                            <img src="img/product2.jpg" alt="Product 2">
+                            <img src="img/hop.jpg" alt="Product 2">
                         </div>
                         <div class="item-details">
-                            <h3>Название товара 2</h3>
-                            <p class="item-price">9 990 ₽</p>
+                            <h3>"合" (HOP) Hiptape ver.</h3>
+                            <p class="item-price">
+                                <div class="catalog__price">
+                                <span class="price-now">2 850 &#8381</span>
+                                <!-- <span class="price-early">2 800 &#8381</span>
+                                <span class="price-sale">-34%</span> -->
+                                </div>
+                            </p>
                             <div class="quantity-controls">
-                                <button class="quantity-btn minus">-</button>
-                                <input type="number" value="1" min="1" class="quantity-input">
-                                <button class="quantity-btn plus">+</button>
+                                <div class="quantity-controls-plus">
+                                    <button class="quantity-btn minus">-</button>
+                                    <input type="number" value="1" min="1" class="quantity-input">
+                                    <button class="quantity-btn plus">+</button>
+                                </div>
+                                <button class="remove-item"><i class="bi bi-trash"></i> Удалить</button>
                             </div>
-                            <button class="remove-item"><i class="bi bi-trash"></i> Удалить</button>
                         </div>
                     </div>
                 </div>
@@ -100,7 +117,7 @@
                     <h3>Итого</h3>
                     <div class="summary-row">
                         <span>Товары (2)</span>
-                        <span>24 980 ₽</span>
+                        <span>5 160 ₽</span>
                     </div>
                     <div class="summary-row">
                         <span>Скидка</span>
@@ -108,7 +125,7 @@
                     </div>
                     <div class="summary-row total">
                         <span>К оплате</span>
-                        <span>24 980 ₽</span>
+                        <span>5 160 ₽</span>
                     </div>
                     <button class="checkout-btn">Оформить заказ</button>
                 </div>
@@ -116,31 +133,195 @@
         </div>
 
         <section class="bestsellers">
-            <h2>Бестселлеры</h2>
+            <h2>Часто покупают</h2>
             <div class="bestsellers-grid">
-                <div class="product-card">
-                    <img src="img/bestseller1.jpg" alt="Bestseller 1">
-                    <h3>Популярный товар 1</h3>
-                    <p class="price">12 990 ₽</p>
-                    <button class="add-to-cart">В корзину</button>
+                <div class="catalog__card" data-aos="zoom-in">
+                    <div class="img__wrapper">
+                        <div class="swiper swiper-card">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                              <!-- Slides -->
+                              <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
+                              <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
+                              <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+                            
+                          </div>
+                          <i class="fav-btn bi bi-heart-fill"></i>
+                          <div class="catalog__promotions">
+                              <div class="remainder">
+                                  Бесплатная доставка из Кореи
+                              </div>
+                              <div class="sales">
+                                  <i class="bi bi-fire"></i> Скидка
+                              </div>
+                        
+                        </div>
+                    </div>
+                    <div class="catalog__price">
+                        <span class="price-now">2 310 &#8381</span>
+                        <span class="price-early">2 800 &#8381</span>
+                        <span class="price-sale">-34%</span>
+                    </div>
+                    <div class="catalog__brand">
+                        <span class="catalog__brand_1"><i class="bi bi-check-circle-fill"></i> Stray kids </span>
+                        <span class="catalog__brand_2"><a href="#" class="catalog__title"><h3>"樂-STAR" (Rock Star) Headliner ver. </h3></a></span>
+                    </div>
+                     
+                    <div class="catalog__feedback">
+                        <div class="catalog__raiting">
+                            <i class="bi bi-star-fill"></i>
+                            <span>4,9</span>
+                    </div>
+                    <div class="catalog__review">
+                        <i class="bi bi-chat-fill"></i>
+                        <span>1 951 отзыва</span>
+                    </div>
+                    </div>
+                    <button class="catalog__btn">В корзину</button>
                 </div>
-                <div class="product-card">
-                    <img src="img/bestseller2.jpg" alt="Bestseller 2">
-                    <h3>Популярный товар 2</h3>
-                    <p class="price">8 990 ₽</p>
-                    <button class="add-to-cart">В корзину</button>
+                <div class="catalog__card" data-aos="zoom-in">
+                    <div class="img__wrapper">
+                        <div class="swiper swiper-card">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                              <!-- Slides -->
+                              <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
+                              <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
+                              <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+                            
+                          </div>
+                          <i class="fav-btn bi bi-heart-fill"></i>
+                          <div class="catalog__promotions">
+                              <div class="remainder">
+                                  Бесплатная доставка из Кореи
+                              </div>
+                              <div class="sales">
+                                  <i class="bi bi-fire"></i> Скидка
+                              </div>
+                        
+                        </div>
+                    </div>
+                    <div class="catalog__price">
+                        <span class="price-now">2 310 &#8381</span>
+                        <span class="price-early">2 800 &#8381</span>
+                        <span class="price-sale">-34%</span>
+                    </div>
+                    <div class="catalog__brand">
+                        <span class="catalog__brand_1"><i class="bi bi-check-circle-fill"></i> Stray kids </span>
+                        <span class="catalog__brand_2"><a href="#" class="catalog__title"><h3>"樂-STAR" (Rock Star) Headliner ver. </h3></a></span>
+                    </div>
+                     
+                    <div class="catalog__feedback">
+                        <div class="catalog__raiting">
+                            <i class="bi bi-star-fill"></i>
+                            <span>4,9</span>
+                    </div>
+                    <div class="catalog__review">
+                        <i class="bi bi-chat-fill"></i>
+                        <span>1 951 отзыва</span>
+                    </div>
+                    </div>
+                    <button class="catalog__btn">В корзину</button>
                 </div>
-                <div class="product-card">
-                    <img src="img/bestseller3.jpg" alt="Bestseller 3">
-                    <h3>Популярный товар 3</h3>
-                    <p class="price">10 990 ₽</p>
-                    <button class="add-to-cart">В корзину</button>
+                <div class="catalog__card" data-aos="zoom-in">
+                    <div class="img__wrapper">
+                        <div class="swiper swiper-card">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                              <!-- Slides -->
+                              <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
+                              <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
+                              <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+                            
+                          </div>
+                          <i class="fav-btn bi bi-heart-fill"></i>
+                          <div class="catalog__promotions">
+                              <div class="remainder">
+                                  Бесплатная доставка из Кореи
+                              </div>
+                              <div class="sales">
+                                  <i class="bi bi-fire"></i> Скидка
+                              </div>
+                        
+                        </div>
+                    </div>
+                    <div class="catalog__price">
+                        <span class="price-now">2 310 &#8381</span>
+                        <span class="price-early">2 800 &#8381</span>
+                        <span class="price-sale">-34%</span>
+                    </div>
+                    <div class="catalog__brand">
+                        <span class="catalog__brand_1"><i class="bi bi-check-circle-fill"></i> Stray kids </span>
+                        <span class="catalog__brand_2"><a href="#" class="catalog__title"><h3>"樂-STAR" (Rock Star) Headliner ver. </h3></a></span>
+                    </div>
+                     
+                    <div class="catalog__feedback">
+                        <div class="catalog__raiting">
+                            <i class="bi bi-star-fill"></i>
+                            <span>4,9</span>
+                    </div>
+                    <div class="catalog__review">
+                        <i class="bi bi-chat-fill"></i>
+                        <span>1 951 отзыва</span>
+                    </div>
+                    </div>
+                    <button class="catalog__btn">В корзину</button>
                 </div>
-                <div class="product-card">
-                    <img src="img/bestseller4.jpg" alt="Bestseller 4">
-                    <h3>Популярный товар 4</h3>
-                    <p class="price">15 990 ₽</p>
-                    <button class="add-to-cart">В корзину</button>
+                <div class="catalog__card" data-aos="zoom-in">
+                    <div class="img__wrapper">
+                        <div class="swiper swiper-card">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                              <!-- Slides -->
+                              <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
+                              <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
+                              <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+                            
+                          </div>
+                          <i class="fav-btn bi bi-heart-fill"></i>
+                          <div class="catalog__promotions">
+                              <div class="remainder">
+                                  Бесплатная доставка из Кореи
+                              </div>
+                              <div class="sales">
+                                  <i class="bi bi-fire"></i> Скидка
+                              </div>
+                        
+                        </div>
+                    </div>
+                    <div class="catalog__price">
+                        <span class="price-now">2 310 &#8381</span>
+                        <span class="price-early">2 800 &#8381</span>
+                        <span class="price-sale">-34%</span>
+                    </div>
+                    <div class="catalog__brand">
+                        <span class="catalog__brand_1"><i class="bi bi-check-circle-fill"></i> Stray kids </span>
+                        <span class="catalog__brand_2"><a href="#" class="catalog__title"><h3>"樂-STAR" (Rock Star) Headliner ver. </h3></a></span>
+                    </div>
+                     
+                    <div class="catalog__feedback">
+                        <div class="catalog__raiting">
+                            <i class="bi bi-star-fill"></i>
+                            <span>4,9</span>
+                    </div>
+                    <div class="catalog__review">
+                        <i class="bi bi-chat-fill"></i>
+                        <span>1 951 отзыва</span>
+                    </div>
+                    </div>
+                    <button class="catalog__btn">В корзину</button>
                 </div>
             </div>
         </section> 

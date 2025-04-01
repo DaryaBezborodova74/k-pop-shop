@@ -75,7 +75,7 @@ main {
 
 /*-----------catalog-------------*/
 h3 {
-    padding-top: 20px;
+    padding-top: 15px;
     padding-bottom: 10px;
 }
 
@@ -238,7 +238,6 @@ h3 {
     border-radius: 10px;
     font-weight: bold;
     margin-top: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     transition: background 0.2s ease-in;
     position: relative;
 }
