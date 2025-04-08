@@ -22,6 +22,7 @@
 <script defer src="js/swiper.js"></script>
 <script defer src="js/aos.js"></script>
 <script defer src="js/checkbox.js"></script>
+<script defer src="js/pop-up.js"></script>
 </head>
 <body>
     <header>
@@ -127,7 +128,63 @@
                         <span>К оплате</span>
                         <span>5 160 ₽</span>
                     </div>
-                    <button class="checkout-btn">Оформить заказ</button>
+                    <button class="checkout-btn__oneclick" onclick="openModalAndLockScroll()">Оформить заказ</button>
+
+                    <dialog class="checkout-dialog__cart" id="myDialog">
+                        <div class="dialog__wrapper">
+                            <h2 class="click1__checkout">Оформление заказа</h2>
+                            <form class="checkout-form">
+                                <div class="form-group">
+                                    <label for="fullName">ФИО*</label>
+                                    <input type="text" id="fullName" name="fullName" placeholder="Иванов Иван Иванович" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Телефон*</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email*</label>
+                                    <input type="email" id="email" name="email" placeholder="example@mail.ru" required>
+                                </div>
+
+                                <div class="address-section">
+                                    <h3>Адрес доставки</h3>
+                                    <div class="form-group">
+                                        <label for="postalCode">Почтовый индекс*</label>
+                                        <input type="text" id="postalCode" name="postalCode" placeholder="123456" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="city">Город*</label>
+                                        <input type="text" id="city" name="city" placeholder="Москва" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="street">Улица*</label>
+                                        <input type="text" id="street" name="street" placeholder="ул. Ленина" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="house">Номер дома*</label>
+                                        <input type="text" id="house" name="house" placeholder="д. 1, кв. 123" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group checkbox">
+                                    <input type="checkbox" id="consent" name="consent" required>
+                                    <label for="consent">Я прочитал(а) и согласен(на) с условиями <a href="#">оферты и политики конфиденциальности</a>*</label>
+                                </div>
+
+                                <div class="form-buttons">
+                                    <button type="submit" class="submit-btn">Оформить заказ</button>
+                                    <button type="button" class="closeDialogBtn" onclick="close()">Отмена</button>
+                                </div>
+                            </form>
+                        </div>
+                    </dialog>
+                    
                 </div>
             </div>
         </div>
@@ -325,15 +382,6 @@
                 </div>
             </div>
         </section> 
-        <!-- <form action class="cart with-coupon">
-            <div class="cart__area-item">
-                <div class="cart-item">
-                    <div class="item-image">
-                        <img src="" alt="">
-                    </div>
-                </div>
-            </div>
-        </form> -->
     </main>
     <footer>
 
