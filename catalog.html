@@ -34,15 +34,12 @@
             </div>
             <nav class="nav">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link--active">Главная</a></li>
-                    <li class="nav__item"><a href="catalog.html" class="nav__link">Каталог</a></li>
-                    <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
-                    <li class="nav__item"><a href="cart.html" class="nav__link"><i class="bi-basket2-fill"></i></a></li>
-                    <li class="nav__item"><a href="like.html" class="nav__link"><i class="bi-heart-fill"></i></a></li>
-                    <li class="nav__item"><a href="profile.html" class="nav__link"><i class="bi-person-fill"></i></a></li>
-                    <!-- <li class="nav__item"><a href="cart.html" class="nav__link"><i class="bi bi-basket2-fill"></i>Корзина</a></li>
-                    <li class="nav__item"><a href="like.html" class="nav__link"><i class="bi bi-heart-fill"></i>Лайк</a></li>
-                    <li class="nav__item"><a href="profile.html" class="nav__link"><i class="bi bi-person-fill"></i>Профиль</a></li> -->
+                    <li class="nav__item"><a href="index.html" class="nav__link--active" aria-label="Главная">Главная</a></li>
+                    <li class="nav__item"><a href="catalog.html" class="nav__link" aria-label="Каталог">Каталог</a></li>
+                    <li class="nav__item"><a href="contacts.html" class="nav__link" aria-label="Контакты">Контакты</a></li>
+                    <li class="nav__item"><a href="cart.html" class="nav__link" aria-label="Корзина"><i class="bi-basket2-fill"></i></a></li>
+                    <li class="nav__item"><a href="like.html" class="nav__link" aria-label="Понравившееся"><i class="bi-heart-fill"></i></a></li>
+                    <li class="nav__item"><a href="profile.html" class="nav__link" aria-label="Профиль"><i class="bi-person-fill"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -184,17 +181,6 @@
                         <option value="price-desc">по убыванию цены</option>
                     </select>
                 </div>
-                    <!-- <div class="catalog__sort">
-                        <div class="catalog__sort-item">
-                            <select class="sort-select" id="sort-select">
-                                <option value="popular-desc">сортировка</option>
-                                <option value="popular-desc">сначала старые</option>
-                                <option value="popular-asc">сначала новые</option>
-                                <option value="price-desc">по возрастанию цены</option>
-                                <option value="price-asc">по убыванию цены</option>
-                            </select>
-                        </div>
-                    </div> -->
                     
                     <div class="catalog__grid">
                         <div class="catalog__card" data-aos="zoom-in">
@@ -229,7 +215,7 @@
                             </div>
                             <div class="catalog__brand">
                                 <span class="catalog__brand_1"><i class="bi bi-check-circle-fill"></i> Stray kids </span>
-                                <span class="catalog__brand_2"><a href="#" class="catalog__title"><h3>"樂-STAR" (Rock Star) Headliner ver. </h3></a></span>
+                                <span class="catalog__brand_2"><a href="album-card.html" class="catalog__title"><h3>"樂-STAR" (Rock Star) Headliner ver. </h3></a></span>
                             </div>
                              
                             <div class="catalog__feedback">
@@ -250,9 +236,198 @@
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
                                       <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/ate.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/ate1.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/ate2.webp" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/ate3.webp" alt=""></div>
+                                    </div>
+                                    <!-- If we need pagination -->
+                                    <div class="swiper-pagination"></div>
+                                  </div>
+                                
+                                <i class="fav-btn bi bi-heart-fill"></i>
+                                <div class="catalog__promotions">
+                                    <!-- <div class="remainder">
+                                        Бесплатная доставка из Кореи
+                                    </div>
+                                    <div class="sales">
+                                        <i class="bi bi-fire"></i> Скидка
+                                    </div> -->
+                                    <div class="new">
+                                        <i class="bi bi-fire"></i> Новинка
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="catalog__price">
+                                <span class="price-now">2 750 &#8381</span>
+                                <!-- <span class="price-early">2 800 &#8381</span>
+                                <span class="price-sale">-34%</span> -->
+                            </div>
+                            <div class="catalog__brand">
+                                <span class="catalog__brand_1"><i class="bi bi-check-circle-fill"></i> Stray kids </span>
+                                <span class="catalog__brand_2"><a href="#" class="catalog__title"><h3>"ATE" Ate ver. </h3></a></span>
+                            </div>
+                             
+                            <div class="catalog__feedback">
+                                <div class="catalog__raiting">
+                                    <i class="bi bi-star-fill"></i>
+                                    <span>5</span>
+                            </div>
+                            <div class="catalog__review">
+                                <i class="bi bi-chat-fill"></i>
+                                <span>913 отзыва</span>
+                            </div>
+                            </div>
+                            <button class="catalog__btn">В корзину</button>
+                        </div>
+                        <div class="catalog__card" data-aos="zoom-in">
+                            <div class="img__wrapper">
+                                <div class="swiper swiper-card">
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                      <!-- Slides -->
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/hop.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/hop1.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/hop2.webp" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/hop3.webp" alt=""></div>
+                                    </div>
+                                    <!-- If we need pagination -->
+                                    <div class="swiper-pagination"></div>
+                                  </div>
+                                
+                                <i class="fav-btn bi bi-heart-fill"></i>
+                                <div class="catalog__promotions">
+                                    <div class="remainder">
+                                        Бесплатная доставка из Кореи
+                                    </div>
+                                    <div class="sales">
+                                        <i class="bi bi-fire"></i> Скидка
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="catalog__price">
+                                <span class="price-now">2 100 &#8381</span>
+                                <span class="price-early">2 690 &#8381</span>
+                                <span class="price-sale">-25%</span>
+                            </div>
+                            <div class="catalog__brand">
+                                <span class="catalog__brand_1"><i class="bi bi-check-circle-fill"></i> Stray kids </span>
+                                <span class="catalog__brand_2"><a href="#" class="catalog__title"><h3>"合" (HOP) Hiptape ver. </h3></a></span>
+                            </div>
+                             
+                            <div class="catalog__feedback">
+                                <div class="catalog__raiting">
+                                    <i class="bi bi-star-fill"></i>
+                                    <span>4,9</span>
+                            </div>
+                            <div class="catalog__review">
+                                <i class="bi bi-chat-fill"></i>
+                                <span>1 841 отзыва</span>
+                            </div>
+                            </div>
+                            <button class="catalog__btn">В корзину</button>
+                        </div>
+                        <div class="catalog__card" data-aos="zoom-in">
+                            <div class="img__wrapper">
+                                <div class="swiper swiper-card">
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                      <!-- Slides -->
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/lose_my_breath.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/lose_my_breath1.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/lose_my_breath2.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/lose_my_breath3.jpg" alt=""></div>
+                                    </div>
+                                    <!-- If we need pagination -->
+                                    <div class="swiper-pagination"></div>
+                                  </div>
+                                
+                                <i class="fav-btn bi bi-heart-fill"></i>
+                                <div class="catalog__promotions">
+                                    <div class="remainder">
+                                        Бесплатная доставка из Кореи
+                                    </div>
+                                    <div class="sales">
+                                        <i class="bi bi-fire"></i> Скидка
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="catalog__price">
+                                <span class="price-now">1 900 &#8381</span>
+                                <span class="price-early">2 100 &#8381</span>
+                                <span class="price-sale">-15%</span>
+                            </div>
+                            <div class="catalog__brand">
+                                <span class="catalog__brand_1"><i class="bi bi-check-circle-fill"></i> Stray kids </span>
+                                <span class="catalog__brand_2"><a href="#" class="catalog__title"><h3>"Lose my breath" (feat. Charlie Puth) CD single </h3></a></span>
+                            </div>
+                             
+                            <div class="catalog__feedback">
+                                <div class="catalog__raiting">
+                                    <i class="bi bi-star-fill"></i>
+                                    <span>4,8</span>
+                            </div>
+                            <div class="catalog__review">
+                                <i class="bi bi-chat-fill"></i>
+                                <span>803 отзыва</span>
+                            </div>
+                            </div>
+                            <button class="catalog__btn">В корзину</button>
+                        </div>
+                        <div class="catalog__card" data-aos="zoom-in">
+                            <div class="img__wrapper">
+                                <div class="swiper swiper-card">
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                      <!-- Slides -->
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/in_life.webp" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/in_life2.jpg" alt=""></div>
+                                    </div>
+                                    <!-- If we need pagination -->
+                                    <div class="swiper-pagination"></div>
+                                  </div>
+                                
+                                <i class="fav-btn bi bi-heart-fill"></i>
+                                <div class="catalog__promotions">
+                                    <div class="remainder">
+                                        Бесплатная доставка из Кореи
+                                    </div>
+                                    <div class="sales">
+                                        <i class="bi bi-fire"></i> Скидка
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="catalog__price">
+                                <span class="price-now">2 490 &#8381</span>
+                                <span class="price-early">2 800 &#8381</span>
+                                <span class="price-sale">-13%</span>
+                            </div>
+                            <div class="catalog__brand">
+                                <span class="catalog__brand_1"><i class="bi bi-check-circle-fill"></i> Stray kids </span>
+                                <span class="catalog__brand_2"><a href="#" class="catalog__title"><h3>"IN生" (In life) </h3></a></span>
+                            </div>
+                             
+                            <div class="catalog__feedback">
+                                <div class="catalog__raiting">
+                                    <i class="bi bi-star-fill"></i>
+                                    <span>4,9</span>
+                            </div>
+                            <div class="catalog__review">
+                                <i class="bi bi-chat-fill"></i>
+                                <span>1 951 отзыва</span>
+                            </div>
+                            </div>
+                            <button class="catalog__btn">В корзину</button>
+                        </div>
+                        <div class="catalog__card" data-aos="zoom-in">
+                            <div class="img__wrapper">
+                                <div class="swiper swiper-card">
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                      <!-- Slides -->
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/5star.jpeg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/5star1.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/5star2.jpg" alt=""></div>
                                     </div>
                                     <!-- If we need pagination -->
                                     <div class="swiper-pagination"></div>
@@ -275,7 +450,7 @@
                             </div>
                             <div class="catalog__brand">
                                 <span class="catalog__brand_1"><i class="bi bi-check-circle-fill"></i> Stray kids </span>
-                                <span class="catalog__brand_2"><a href="#" class="catalog__title"><h3>"樂-STAR" (Rock Star) Headliner ver. </h3></a></span>
+                                <span class="catalog__brand_2"><a href="#" class="catalog__title"><h3>"5-STAR" Limited and Standard ver. </h3></a></span>
                             </div>
                              
                             <div class="catalog__feedback">
@@ -296,9 +471,57 @@
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
                                       <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/super_bowl.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/super_bowl1.webp" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/super_bowl2.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/super_bowl3.webp" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/super_bowl4.webp" alt=""></div>
+                                    </div>
+                                    <!-- If we need pagination -->
+                                    <div class="swiper-pagination"></div>
+                                  </div>
+                                
+                                <i class="fav-btn bi bi-heart-fill"></i>
+                                <div class="catalog__promotions">
+                                    <!-- <div class="remainder">
+                                        Бесплатная доставка из Кореи
+                                    </div>
+                                    <div class="sales">
+                                        <i class="bi bi-fire"></i> Скидка
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="catalog__price">
+                                <span class="price-now">5 740 &#8381</span>
+                                <!-- <span class="price-early">2 800 &#8381</span>
+                                <span class="price-sale">-34%</span> -->
+                            </div>
+                            <div class="catalog__brand">
+                                <span class="catalog__brand_1"><i class="bi bi-check-circle-fill"></i> Stray kids </span>
+                                <span class="catalog__brand_2"><a href="#" class="catalog__title"><h3>"Social Path / Super Bowl" Japanese ver. </h3></a></span>
+                            </div>
+                             
+                            <div class="catalog__feedback">
+                                <div class="catalog__raiting">
+                                    <i class="bi bi-star-fill"></i>
+                                    <span>4,9</span>
+                            </div>
+                            <div class="catalog__review">
+                                <i class="bi bi-chat-fill"></i>
+                                <span>1 951 отзыва</span>
+                            </div>
+                            </div>
+                            <button class="catalog__btn">В корзину</button>
+                        </div>
+                        <div class="catalog__card" data-aos="zoom-in">
+                            <div class="img__wrapper">
+                                <div class="swiper swiper-card">
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                      <!-- Slides -->
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/maxident.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/maxident1.webp" alt=""></div>
+                                      <div class="swiper-slide"><img class="catalog__img" src="img/maxident2.jpg" alt=""></div>
                                     </div>
                                     <!-- If we need pagination -->
                                     <div class="swiper-pagination"></div>
@@ -321,237 +544,7 @@
                             </div>
                             <div class="catalog__brand">
                                 <span class="catalog__brand_1"><i class="bi bi-check-circle-fill"></i> Stray kids </span>
-                                <span class="catalog__brand_2"><a href="#" class="catalog__title"><h3>"樂-STAR" (Rock Star) Headliner ver. </h3></a></span>
-                            </div>
-                             
-                            <div class="catalog__feedback">
-                                <div class="catalog__raiting">
-                                    <i class="bi bi-star-fill"></i>
-                                    <span>4,9</span>
-                            </div>
-                            <div class="catalog__review">
-                                <i class="bi bi-chat-fill"></i>
-                                <span>1 951 отзыва</span>
-                            </div>
-                            </div>
-                            <button class="catalog__btn">В корзину</button>
-                        </div>
-                        <div class="catalog__card" data-aos="zoom-in">
-                            <div class="img__wrapper">
-                                <div class="swiper swiper-card">
-                                    <!-- Additional required wrapper -->
-                                    <div class="swiper-wrapper">
-                                      <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
-                                    </div>
-                                    <!-- If we need pagination -->
-                                    <div class="swiper-pagination"></div>
-                                  </div>
-                                
-                                <i class="fav-btn bi bi-heart-fill"></i>
-                                <div class="catalog__promotions">
-                                    <div class="remainder">
-                                        Бесплатная доставка из Кореи
-                                    </div>
-                                    <div class="sales">
-                                        <i class="bi bi-fire"></i> Скидка
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="catalog__price">
-                                <span class="price-now">2 310 &#8381</span>
-                                <span class="price-early">2 800 &#8381</span>
-                                <span class="price-sale">-34%</span>
-                            </div>
-                            <div class="catalog__brand">
-                                <span class="catalog__brand_1"><i class="bi bi-check-circle-fill"></i> Stray kids </span>
-                                <span class="catalog__brand_2"><a href="#" class="catalog__title"><h3>"樂-STAR" (Rock Star) Headliner ver. </h3></a></span>
-                            </div>
-                             
-                            <div class="catalog__feedback">
-                                <div class="catalog__raiting">
-                                    <i class="bi bi-star-fill"></i>
-                                    <span>4,9</span>
-                            </div>
-                            <div class="catalog__review">
-                                <i class="bi bi-chat-fill"></i>
-                                <span>1 951 отзыва</span>
-                            </div>
-                            </div>
-                            <button class="catalog__btn">В корзину</button>
-                        </div>
-                        <div class="catalog__card" data-aos="zoom-in">
-                            <div class="img__wrapper">
-                                <div class="swiper swiper-card">
-                                    <!-- Additional required wrapper -->
-                                    <div class="swiper-wrapper">
-                                      <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
-                                    </div>
-                                    <!-- If we need pagination -->
-                                    <div class="swiper-pagination"></div>
-                                  </div>
-                                
-                                <i class="fav-btn bi bi-heart-fill"></i>
-                                <div class="catalog__promotions">
-                                    <div class="remainder">
-                                        Бесплатная доставка из Кореи
-                                    </div>
-                                    <div class="sales">
-                                        <i class="bi bi-fire"></i> Скидка
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="catalog__price">
-                                <span class="price-now">2 310 &#8381</span>
-                                <span class="price-early">2 800 &#8381</span>
-                                <span class="price-sale">-34%</span>
-                            </div>
-                            <div class="catalog__brand">
-                                <span class="catalog__brand_1"><i class="bi bi-check-circle-fill"></i> Stray kids </span>
-                                <span class="catalog__brand_2"><a href="#" class="catalog__title"><h3>"樂-STAR" (Rock Star) Headliner ver. </h3></a></span>
-                            </div>
-                             
-                            <div class="catalog__feedback">
-                                <div class="catalog__raiting">
-                                    <i class="bi bi-star-fill"></i>
-                                    <span>4,9</span>
-                            </div>
-                            <div class="catalog__review">
-                                <i class="bi bi-chat-fill"></i>
-                                <span>1 951 отзыва</span>
-                            </div>
-                            </div>
-                            <button class="catalog__btn">В корзину</button>
-                        </div>
-                        <div class="catalog__card" data-aos="zoom-in">
-                            <div class="img__wrapper">
-                                <div class="swiper swiper-card">
-                                    <!-- Additional required wrapper -->
-                                    <div class="swiper-wrapper">
-                                      <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
-                                    </div>
-                                    <!-- If we need pagination -->
-                                    <div class="swiper-pagination"></div>
-                                  </div>
-                                
-                                <i class="fav-btn bi bi-heart-fill"></i>
-                                <div class="catalog__promotions">
-                                    <div class="remainder">
-                                        Бесплатная доставка из Кореи
-                                    </div>
-                                    <div class="sales">
-                                        <i class="bi bi-fire"></i> Скидка
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="catalog__price">
-                                <span class="price-now">2 310 &#8381</span>
-                                <span class="price-early">2 800 &#8381</span>
-                                <span class="price-sale">-34%</span>
-                            </div>
-                            <div class="catalog__brand">
-                                <span class="catalog__brand_1"><i class="bi bi-check-circle-fill"></i> Stray kids </span>
-                                <span class="catalog__brand_2"><a href="#" class="catalog__title"><h3>"樂-STAR" (Rock Star) Headliner ver. </h3></a></span>
-                            </div>
-                             
-                            <div class="catalog__feedback">
-                                <div class="catalog__raiting">
-                                    <i class="bi bi-star-fill"></i>
-                                    <span>4,9</span>
-                            </div>
-                            <div class="catalog__review">
-                                <i class="bi bi-chat-fill"></i>
-                                <span>1 951 отзыва</span>
-                            </div>
-                            </div>
-                            <button class="catalog__btn">В корзину</button>
-                        </div>
-                        <div class="catalog__card" data-aos="zoom-in">
-                            <div class="img__wrapper">
-                                <div class="swiper swiper-card">
-                                    <!-- Additional required wrapper -->
-                                    <div class="swiper-wrapper">
-                                      <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
-                                    </div>
-                                    <!-- If we need pagination -->
-                                    <div class="swiper-pagination"></div>
-                                  </div>
-                                
-                                <i class="fav-btn bi bi-heart-fill"></i>
-                                <div class="catalog__promotions">
-                                    <div class="remainder">
-                                        Бесплатная доставка из Кореи
-                                    </div>
-                                    <div class="sales">
-                                        <i class="bi bi-fire"></i> Скидка
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="catalog__price">
-                                <span class="price-now">2 310 &#8381</span>
-                                <span class="price-early">2 800 &#8381</span>
-                                <span class="price-sale">-34%</span>
-                            </div>
-                            <div class="catalog__brand">
-                                <span class="catalog__brand_1"><i class="bi bi-check-circle-fill"></i> Stray kids </span>
-                                <span class="catalog__brand_2"><a href="#" class="catalog__title"><h3>"樂-STAR" (Rock Star) Headliner ver. </h3></a></span>
-                            </div>
-                             
-                            <div class="catalog__feedback">
-                                <div class="catalog__raiting">
-                                    <i class="bi bi-star-fill"></i>
-                                    <span>4,9</span>
-                            </div>
-                            <div class="catalog__review">
-                                <i class="bi bi-chat-fill"></i>
-                                <span>1 951 отзыва</span>
-                            </div>
-                            </div>
-                            <button class="catalog__btn">В корзину</button>
-                        </div>
-                        <div class="catalog__card" data-aos="zoom-in">
-                            <div class="img__wrapper">
-                                <div class="swiper swiper-card">
-                                    <!-- Additional required wrapper -->
-                                    <div class="swiper-wrapper">
-                                      <!-- Slides -->
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar2.jpg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar.jpeg" alt=""></div>
-                                      <div class="swiper-slide"><img class="catalog__img" src="img/rockstar3.jpg" alt=""></div>
-                                    </div>
-                                    <!-- If we need pagination -->
-                                    <div class="swiper-pagination"></div>
-                                  </div>
-                                
-                                <i class="fav-btn bi bi-heart-fill"></i>
-                                <div class="catalog__promotions">
-                                    <div class="remainder">
-                                        Бесплатная доставка из Кореи
-                                    </div>
-                                    <div class="sales">
-                                        <i class="bi bi-fire"></i> Скидка
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="catalog__price">
-                                <span class="price-now">2 310 &#8381</span>
-                                <span class="price-early">2 800 &#8381</span>
-                                <span class="price-sale">-34%</span>
-                            </div>
-                            <div class="catalog__brand">
-                                <span class="catalog__brand_1"><i class="bi bi-check-circle-fill"></i> Stray kids </span>
-                                <span class="catalog__brand_2"><a href="#" class="catalog__title"><h3>"樂-STAR" (Rock Star) Headliner ver. </h3></a></span>
+                                <span class="catalog__brand_2"><a href="#" class="catalog__title"><h3>"MAXIDENT" Heart, T-crush and Limitide ver. </h3></a></span>
                             </div>
                              
                             <div class="catalog__feedback">

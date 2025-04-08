@@ -274,8 +274,8 @@ h3 {
 
 .catalog__promotions {
     position: absolute;
-    bottom: 15px;
-    left: 15px;
+    bottom: 20px;
+    left: 10px;
     z-index: 1;
 }
 
@@ -284,7 +284,7 @@ h3 {
     color: var(--color-white);
     border-radius: 7px;
     padding: 5px 10px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 600;
     margin-top: 7px;
     width: 100px;
@@ -313,8 +313,20 @@ h3 {
     color: var(--color-white);
     border-radius: 7px;
     padding: 5px 10px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 600;
+}
+
+.new {
+    background-color: var(--color-magenta);
+    color: var(--color-white);
+    border-radius: 7px;
+    padding: 5px 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    width: 100px;
+    display: flex;
+    flex-direction: row;
 }
 
 .catalog__title:hover,

@@ -408,7 +408,7 @@ main {
     display: block;
     aspect-ratio: 1;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     object-fit: cover;
 }
 
@@ -432,6 +432,8 @@ main {
 .mySwiper .swiper-slide {
     width: 25%;
     height: 100%;
+    padding-top: 15px;
+    border-radius: 10px;
 }
 
 .mySwiper .swiper-slide-thumb-active {
@@ -442,6 +444,7 @@ main {
     display: block;
     width: 100%;
     object-fit: cover;
+    border-radius: 7px;
 }
 
 .swiper-slide__bottom {
@@ -760,6 +763,11 @@ dialog::backdrop {
     display: flex;
     align-items: flex-start;
     gap: 10px;
+}
+
+.form-group__checkbox {
+    display: flex;
+    padding-right: 15px;
 }
 
 .consent-checkbox input[type="checkbox"] {
