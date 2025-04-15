@@ -417,6 +417,9 @@ main {
 
 .swiper-wrapper {}
     
+.swiper__block {
+    max-width: 550px;
+}
 
 .swiper-slide {
     text-align: center;
@@ -1202,7 +1205,28 @@ dialog::backdrop {
     transition: color 0.2s;
 }
 
+/*--------------------------span--------------------------*/
+
 .social-icon:hover {
     color: var(--color-magenta);
 }
 
+.nav__item {
+    position: relative;
+    display: inline-block;
+}
+
+.quantity__goods {
+    position: absolute;
+    background: var(--color-magenta);
+    color: var(--color-white);
+    border-radius: 100%;
+    font-size: 0.7rem;
+    aspect-ratio: 1;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    right: -10px;
+    top: 0;
+}

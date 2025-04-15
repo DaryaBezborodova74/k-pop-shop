@@ -7,21 +7,6 @@ const swiperCard = new Swiper('.swiper-card', {
     pagination: {
       el: '.swiper-pagination',
     },
-  
-    // Navigation arrows
-    // navigation: {
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev',
-    // },
-  
-    // // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    // },
-    // autoplay: {
-    //     delay: 2500,
-    //     disableOnInteraction: false,
-    //   },
   });
 
   var swiper = new Swiper(".mySwiper", {
@@ -42,3 +27,19 @@ const swiperCard = new Swiper('.swiper-card', {
       swiper: swiper,
     },
   });
+
+  // var galleryTop = new Swiper(".product__galery-wrap", {
+  //   spaceBetween: 10,
+  //   thumbs: {
+  //     swiper: galleryThumbs
+  //   }
+  // });
+  // var galleryThumbs = new Swiper(".product__thumbs", {
+  //   spaceBetween: 10,
+  //   slidesPerView: 4,
+  //   direction:'vertical',
+  //   navigation: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev',
+  //   }
+  // });
