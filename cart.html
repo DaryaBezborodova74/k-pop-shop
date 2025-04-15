@@ -22,7 +22,7 @@
 <script defer src="js/swiper.js"></script>
 <script defer src="js/aos.js"></script>
 <script defer src="js/checkbox.js"></script>
-<script defer src="js/pop-up.js"></script>
+<script defer src="js/pop-up1.js"></script>
 </head>
 <body>
     <header>
@@ -130,55 +130,113 @@
                     <dialog class="checkout-dialog__cart" id="myDialog">
                         <div class="dialog__wrapper">
                             <h2 class="click1__checkout">Оформление заказа</h2>
-                            <form class="checkout-form">
-                                <div class="form-group">
-                                    <label for="fullName">ФИО*</label>
-                                    <input type="text" id="fullName" name="fullName" placeholder="Иванов Иван Иванович" required>
+                            <div class="checkout-container">
+                                <div class="checkout-form-container">
+                                    <form class="checkout-form">
+                                        <div class="personal-info">
+                                            <h3>Личные данные</h3>
+                                            <div class="form-group">
+                                                <label for="fullName">ФИО*</label>
+                                                <input type="text" id="fullName" name="fullName" placeholder="Иванов Иван Иванович" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="phone">Телефон*</label>
+                                                <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email">Email*</label>
+                                                <input type="email" id="email" name="email" placeholder="example@mail.ru" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="address-section">
+                                            <h3>Адрес доставки</h3>
+                                            <div class="form-row">
+                                                <div class="form-group half">
+                                                    <label for="postalCode">Индекс*</label>
+                                                    <input type="text" id="postalCode" name="postalCode" placeholder="123456" required>
+                                                </div>
+                                                <div class="form-group half">
+                                                    <label for="city">Город*</label>
+                                                    <input type="text" id="city" name="city" placeholder="Москва" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group half">
+                                                    <label for="street">Улица*</label>
+                                                    <input type="text" id="street" name="street" placeholder="ул. Ленина" required>
+                                                </div>
+                                                <div class="form-group half">
+                                                    <label for="house">Дом*</label>
+                                                    <input type="text" id="house" name="house" placeholder="1" required>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group">
+                                                        <label for="apartment">Квартира*</label>
+                                                        <input type="text" id="apartment" name="apartment" placeholder="123" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="payment-section">
+                                            <h3>Данные карты</h3>
+                                            <div class="form-group">
+                                                <label for="cardNumber">Номер карты*</label>
+                                                <input type="text" id="cardNumber" name="cardNumber" placeholder="0000 0000 0000 0000" required>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group half">
+                                                    <label for="expiryDate">Срок действия*</label>
+                                                    <input type="text" id="expiryDate" name="expiryDate" placeholder="ММ/ГГ" required>
+                                                </div>
+                                                <div class="form-group half">
+                                                    <label for="cvv">CVV*</label>
+                                                    <input type="password" id="cvv" name="cvv" placeholder="***" maxlength="3" required>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group__checkbox">
+                                            <input type="checkbox" id="consent" name="consent" required>
+                                            <label for="consent">Я прочитал(а) и согласен(на) с условиями <a href="#">оферты и политики конфиденциальности</a>*</label>
+                                        </div>
+                                    </form>
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="phone">Телефон*</label>
-                                    <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="email">Email*</label>
-                                    <input type="email" id="email" name="email" placeholder="example@mail.ru" required>
-                                </div>
-
-                                <div class="address-section">
-                                    <h3>Адрес доставки</h3>
-                                    <div class="form-group">
-                                        <label for="postalCode">Почтовый индекс*</label>
-                                        <input type="text" id="postalCode" name="postalCode" placeholder="123456" required>
+                                <div class="order-summary-sidebar">
+                                    <h3>Ваш заказ</h3>
+                                    <div class="order-items">
+                                        <div class="order-item">
+                                            <span>"合" (HOP) Hiptape ver.</span>
+                                            <span>2 850 ₽</span>
+                                        </div>
+                                        <div class="order-item">
+                                            <span>"ATE" Ate ver.</span>
+                                            <span>2 310 ₽</span>
+                                        </div>
+                                    </div>
+                                    <div class="order-totals">
+                                        <div class="total-row">
+                                            <span>Товары:</span>
+                                            <span>5 160 ₽</span>
+                                        </div>
+                                        <div class="total-row">
+                                            <span>Скидка:</span>
+                                            <span>-0 ₽</span>
+                                        </div>
+                                        <div class="total-row final">
+                                            <span>Итого к оплате:</span>
+                                            <span>5 160 ₽</span>
+                                        </div>
                                     </div>
 
-                                    <div class="form-group">
-                                        <label for="city">Город*</label>
-                                        <input type="text" id="city" name="city" placeholder="Москва" required>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="street">Улица*</label>
-                                        <input type="text" id="street" name="street" placeholder="ул. Ленина" required>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="house">Номер дома*</label>
-                                        <input type="text" id="house" name="house" placeholder="д. 1, кв. 123" required>
+                                    <div class="form-buttons">
+                                        <button type="submit" class="submit-btn">Оплатить</button>
+                                        <button type="button" class="closeDialogBtn" onclick="close()">Отмена</button>
                                     </div>
                                 </div>
-
-                                <div class="form-group__checkbox">
-                                    <input type="checkbox" id="consent" name="consent" required>
-                                    <label for="consent">Я прочитал(а) и согласен(на) с условиями <a href="#">оферты и политики конфиденциальности</a>*</label>
-                                </div>
-
-                                <div class="form-buttons">
-                                    <button type="submit" class="submit-btn">Оформить заказ</button>
-                                    <button type="button" class="closeDialogBtn" onclick="close()">Отмена</button>
-                                </div>
-                            </form>
+                            </div>
                         </div>
                     </dialog>
                     
@@ -257,7 +315,7 @@
                         <i class="fav-btn bi bi-heart-fill"></i>
                         <div class="catalog__promotions">
                             <div class="remainder">
-                                Бесплатная доставка из Кореи
+                                Доставка из Кореи
                             </div>
                             <div class="sales">
                                 <i class="bi bi-fire"></i> Скидка
@@ -304,7 +362,7 @@
                         <i class="fav-btn bi bi-heart-fill"></i>
                         <div class="catalog__promotions">
                             <div class="remainder">
-                                Бесплатная доставка из Кореи
+                                Доставка из Кореи
                             </div>
                             <div class="sales">
                                 <i class="bi bi-fire"></i> Скидка
@@ -349,7 +407,7 @@
                         <i class="fav-btn bi bi-heart-fill"></i>
                         <div class="catalog__promotions">
                             <div class="remainder">
-                                Бесплатная доставка из Кореи
+                                Доставка из Кореи
                             </div>
                             <div class="sales">
                                 <i class="bi bi-fire"></i> Скидка
@@ -382,6 +440,57 @@
         </section> 
     </main>
     <footer>
+        <div class="footer__container">
+            <div class="footer__column">
+                <div class="footer__logo">
+                    <img src="img/Chosen Ones1.png" alt="Chosen Ones logo">
+                    <p class="copyright">© Chosen Ones 2025</p>
+                </div>
+            </div>
+
+            <div class="footer__column">
+                <h3 class="footer__title">О нас</h3>
+                <ul class="footer__list">
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Магазины</a></li>
+                    <li><a href="#">Работа у нас</a></li>
+                    <li><a href="#">Сертификаты</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__column">
+                <h3 class="footer__title">Где забрать</h3>
+                <ul class="footer__list">
+                    <li><a href="#">Карта</a></li>
+                    <li><a href="#">Пункты выдачи</a></li>
+                    <li><a href="#">Руководство по ПВЗ</a></li>
+                    <li><a href="#">Стать партнером</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__column">
+                <h3 class="footer__title">Помощь</h3>
+                <ul class="footer__list">
+                    <li><a href="#">Возврат</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                    <li><a href="#">Условия обработки данных</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__column">
+                <h3 class="footer__title">Связаться с нами</h3>
+                <ul class="footer__list">
+                    <li><a href="mailto:info@chosenones.com"><i class="bi bi-envelope"></i> info@chosenones.com</a></li>
+                    <li><a href="tel:+78001234567"><i class="bi bi-telephone"></i> 8 (800) 123-45-67</a></li>
+                    <div class="footer__social">
+                        <a href="#" class="social-icon"><i class="bi bi-vk"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-telegram"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </ul>
+            </div>
+        </div>
 
     </footer>
 </body>
