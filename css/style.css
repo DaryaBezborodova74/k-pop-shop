@@ -131,43 +131,6 @@ h3 {
     }
 }
 
-#btn-close-filter-panel,
-#btn-show-filter-panel-2 {
-    display: none;
-}
-
-@media (max-width:768px) {
-    .catalog__filter {
-        position: fixed;
-        z-index: 100;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        display: none;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        scrollbar-width: thin;
-        scrollbar-color: var(--color-magenta) var(--color-white);
-        border: solid 10px var(--color-white);
-    }
-
-    #btn-close-filter-panel {
-        display: flex;
-        z-index: 50;
-        position: fixed;
-        right: 0;
-        top: 50%; 
-    }
-
-    #btn-show-filter-panel-2 {
-        display: block;
-    }
-} 
-
-.show-filter-panel {
-    display: block;
-}
-
 /*-----------------карточка товара------------------*/
 
 .catalog__title {
@@ -992,3 +955,74 @@ input[type=range].filter-price__slider::-ms-fill-lower {
     top: -3;
 }
 
+/*-----------------------filter panel-------------------*/
+
+#btn-close-filter-panel,
+#btn-show-filter-panel {
+    display: none;
+}
+
+@media (max-width:768px) {
+    .catalog__filter {
+        position: fixed;
+        z-index: 300;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: none;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-magenta) var(--color-white);
+        border: solid 10px var(--color-white);
+    }
+
+    #btn-show-filter-panel {
+        display: flex;
+        z-index: 50;
+        position: fixed;
+        right: 0;
+        top: 50%; 
+    }
+
+} 
+
+.show-filter-panel {
+    /* transition: all 0.7s;
+    transform: translate(0); */
+    display: block;
+}
+
+.catalog__filter {
+    width: 200px;
+    flex-shrink: 0;
+    background-color: var(--color-white);
+    transition: transform 0.7 ease-in-out;
+}
+
+.catalog__btn--goods {
+    background-color: var(--color-magenta);
+    color: var(--color-white);
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background 0.2s ease-in;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.goods {
+    display: flex;
+    margin-right: 40px;
+    margin-left: 40px;
+    font-size: 1.5rem;
+    justify-content: space-between;
+}
