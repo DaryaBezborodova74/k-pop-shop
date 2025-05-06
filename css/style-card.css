@@ -183,6 +183,8 @@ main {
     padding: 20px;
     background-color: var(--color-white);
     border-radius: 8px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /*----------------------------------Product Gallery----------------------------------*/

@@ -1020,9 +1020,10 @@ input[type=range].filter-price__slider::-ms-fill-lower {
 }
 
 .goods {
-    display: flex;
+    /* display: flex;
+    justify-content: space-between; */
     margin-right: 40px;
     margin-left: 40px;
     font-size: 1.5rem;
-    justify-content: space-between;
+    margin: auto;
 }

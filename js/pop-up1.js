@@ -3,6 +3,7 @@ const dialogOpener = document.querySelector('.checkout-btn__oneclick');
 const dialogCloser = dialog.querySelector('.closeDialogBtn');
 const checkoutForm = dialog.querySelector('.checkout-form');
 const inputs = checkoutForm.querySelectorAll('input[required]');
+const btnPayment = document.querySelector('.submit-btn');
 
 function closeOnBackDropClick({ currentTarget, target }) {
     const dialog = currentTarget;
@@ -237,6 +238,9 @@ inputs.forEach(input => {
                 formatStreet(input);
                 validateInput(input);
                 break;
+            case 'fullName':
+                validateInput(input);
+                break;
             case 'house':
                 formatHouse(input);
                 validateInput(input);
@@ -252,7 +256,7 @@ inputs.forEach(input => {
 });
 
 // Form submission handling
-checkoutForm.addEventListener('submit', async (event) => {
+btnPayment.addEventListener('click', async (event) => {
     event.preventDefault();
     let isValid = true;
 
@@ -273,6 +277,9 @@ checkoutForm.addEventListener('submit', async (event) => {
                 break;
             case 'street':
                 isValid = validateInput(input) && isValid;
+                break;
+            case 'fullName':
+                validateInput(input);
                 break;
             case 'house':
                 isValid = validateInput(input) && isValid;
@@ -322,3 +329,5 @@ checkoutForm.addEventListener('submit', async (event) => {
         }
     }
 });
+
+
