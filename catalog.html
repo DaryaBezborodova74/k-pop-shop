@@ -231,9 +231,13 @@
                             </div>
 
                             <div class="catalog__btn--goods">
-                                <button class="goods_plus"><i class="bi bi-plus-square-fill"></i></button>
-                                1
-                                <button class="goods_minus"></button><i class="bi bi-dash-square-fill"></i></button>
+                                <button class="goods_minus" aria-label="Уменьшить количество">
+                                    <i class="bi bi-dash-square-fill"></i>
+                                </button>
+                                <span class="goods_count">1</span>
+                                <button class="goods_plus" aria-label="Увеличить количество">
+                                    <i class="bi bi-plus-square-fill"></i>
+                                </button>
                             </div>
 
                         </div>
@@ -1188,8 +1192,10 @@
         </div>
 
     </footer>
-    <button id="btn-show-filter-panel" aria-label="показать панель фильтрации">
-        <i class="bi bi-filter"></i>
+    <button id="btn-show-filter-panel" aria-label="Открыть меню" class="burger-menu" style="display: none;">
+        <span class="burger-menu__icon">
+            <i class="bi bi-list"></i>
+        </span>
     </button>
 </body>
 </html>
