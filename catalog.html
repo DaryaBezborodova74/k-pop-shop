@@ -30,7 +30,7 @@
         <div class="header__top">
             <div class="logo">
                 <a href="catalog.html">
-                    <img src="img/Chosen Ones.png" alt="Chosen Ones logo" class="logo__img">
+                    <img src="img/Chosen-Ones.svg" alt="Chosen Ones logo" class="logo__img">
                 </a>
             </div>
             <nav class="nav">
@@ -174,8 +174,10 @@
                 
                 <div class="catalog__content">
                     <div class="filter__section">
-                    <h3>Сортировка</h3>
-                    <select class="filter-sort-choices" name="sort" id="sort" aria-label="Сортировка товаров">
+                    
+                    <h3 class="sort-label" id="sort-label">Сортировка</h3>
+                    <label for="sort" class="visually-hidden">Выберите способ сортировки</label>
+                    <select class="filter-sort-choices" name="sort" id="sort" aria-labelledby="sort-label">
                         <option value="old" aria-label="сначала старые">сначала старые</option>
                         <option value="new" aria-label="сначала новые">сначала новые</option>
                         <option value="price-asc" aria-label="по возрастанию цены">по возрастанию цены</option>
@@ -1142,7 +1144,7 @@
         <div class="footer__container">
             <div class="footer__column">
                 <div class="footer__logo">
-                    <img src="img/Chosen Ones1.png" alt="Chosen Ones logo">
+                    <img src="img/Chosen-Ones1.svg" alt="Chosen Ones logo">
                     <p class="copyright">© Chosen Ones 2025</p>
                 </div>
             </div>
@@ -1182,13 +1184,13 @@
                 <ul class="footer__list">
                     <li><a href="mailto:info@chosenones.com"><i class="bi bi-envelope"></i> info@chosenones.com</a></li>
                     <li><a href="tel:+78001234567"><i class="bi bi-telephone"></i> 8 (800) 123-45-67</a></li>
-                    <div class="footer__social">
+                    <li class="footer__social">
                         <a href="#" class="social-icon" aria-label="Whatsapp"><i class="bi bi-whatsapp"></i></i></a>
                         <a href="#" class="social-icon" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
                         <a href="#" class="social-icon" aria-label="Youtube"><i class="bi bi-youtube"></i></a>
                         <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
                         <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                    </div>
+                    </li>
                 </ul>
             </div>
         </div>

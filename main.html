@@ -10,141 +10,126 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style-card.css">
+    <link rel="stylesheet" href="css/style.css">
 
-<link
-    rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-
-<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"/>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 <script defer src="js/swiper.js"></script>
 <script defer src="js/aos.js"></script>
 <script defer src="js/checkbox.js"></script>
-<script defer src="js/pop-up.js"></script>
+<script defer src="js/choices.js"></script>
+<script defer src="js/filter_button.js"></script>
+
 </head>
 <body>
     <header>
         <div class="header__top">
             <div class="logo">
-                <img src="img/Chosen Ones.png" alt="Chosen Ones logo" class="logo__img"><a href="index.html" class="nav__link"></a>
+                <a href="catalog.html">
+                    <img src="img/Chosen-Ones.svg" alt="Chosen Ones logo" class="logo__img">
+                </a>
             </div>
             <nav class="nav">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="main.html" class="nav__link">Главная</a></li>
-                    <li class="nav__item"><a href="catalog.html" class="nav__link--active">Каталог</a></li>
-                    <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
-                    <li class="nav__item"><a href="cart.html" class="nav__link"><i class="bi-basket2-fill"></i></a></li>
-                    <li class="nav__item"><a href="like.html" class="nav__link"><i class="bi-heart-fill"></i></a></li>
-                    <li class="nav__item"><a href="profile.html" class="nav__link"><i class="bi-person-fill"></i></a></li>
+                    <li class="nav__item"><a href="main.html" class="nav__link--active" aria-label="Главная">Главная</a></li>
+                    <li class="nav__item"><a href="catalog.html" class="nav__link" aria-label="Каталог">Каталог</a></li>
+                    <li class="nav__item"><a href="contacts.html" class="nav__link" aria-label="Контакты">Контакты</a></li>
+                    <li class="nav__item"><a href="cart.html" class="nav__link" aria-label="Корзина"><i class="bi-basket2-fill"></i><span class="quantity__goods">2</span></a></li>
+                    <li class="nav__item"><a href="like.html" class="nav__link" aria-label="Понравившееся"><i class="bi-heart-fill"></i><span class="quantity__goods">5</span></a></li>
+                    <li class="nav__item"><a href="profile.html" class="nav__link" aria-label="Профиль"><i class="bi-person-fill"></i></a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <main>
-        <section class="hero">
-            <div class="container">
-                <h1 class="hero__title">Добро пожаловать в Chosen Ones</h1>
-                <p class="hero__subtitle">Ваш надежный магазин K-pop товаров</p>
+        <div class="search-bar">
+            <form action="catalog.html" method="get" style="display: flex;">
+                <input type="text" name="search" placeholder="Поиск по товарам, группам, артистам...">
+                <button type="submit" aria-label="Поиск"><i class="bi bi-search"></i></button>
+            </form>
+        </div>
+
+        <!-- Groups grid -->
+        <section class="groups-section">
+            <div class="group-card group-card--photo" onclick="window.location.href='catalog.html'">
+                <div class="group-card-img" style="background-image: url('img/bts_group_2.jpg');"></div>
+                <div class="group-name">BTS</div>
+            </div>
+            <div class="group-card group-card--photo" onclick="window.location.href='catalog.html'">
+                <div class="group-card-img" style="background-image: url('img/stray_kids_group_1.jpg');"></div>
+                <div class="group-name">Stray Kids</div>
+            </div>
+            <div class="group-card group-card--photo" onclick="window.location.href='catalog.html'">
+                <div class="group-card-img" style="background-image: url('img/enhypen_group.jpg');"></div>
+                <div class="group-name">Enhypen</div>
+            </div>
+            <div class="group-card group-card--photo" onclick="window.location.href='catalog.html'">
+                <div class="group-card-img" style="background-image: url('img/txt_group_1.jpg');"></div>
+                <div class="group-name">TXT</div>
+            </div>
+            <div class="group-card group-card--photo" onclick="window.location.href='catalog.html'">
+                <div class="group-card-img" style="background-image: url('img/blackpink_group.jpg');"></div>
+                <div class="group-name">BLACKPINK</div>
+            </div>
+            <div class="group-card group-card--photo" onclick="window.location.href='catalog.html'">
+                <div class="group-card-img" style="background-image: url('img/ateez_group_2.webp');"></div>
+                <div class="group-name">ATEEZ</div>
+            </div>
+            <div class="group-card group-card--photo" onclick="window.location.href='catalog.html'">
+                <div class="group-card-img" style="background-image: url('img/itzy_group.jpg');"></div>
+                <div class="group-name">ITZY</div>
+            </div>
+            <div class="group-card group-card--photo" onclick="window.location.href='catalog.html'">
+                <div class="group-card-img" style="background-image: url('img/twice_group.jpg');"></div>
+                <div class="group-name">TWICE</div>
             </div>
         </section>
 
-        <section class="categories">
-            <div class="container">
-                <h2 class="section-title">Категории</h2>
-                <div class="categories__grid">
-                    <a href="#male-groups" class="category-card" data-aos="fade-up">
-                        <img src="img/male-groups.jpg" alt="Мужские группы" class="category-card__img">
-                        <h3 class="category-card__title">Мужские группы</h3>
-                    </a>
-                    <a href="#female-groups" class="category-card" data-aos="fade-up" data-aos-delay="100">
-                        <img src="img/female-groups.jpg" alt="Женские группы" class="category-card__img">
-                        <h3 class="category-card__title">Женские группы</h3>
-                    </a>
-                    <a href="#mixed-groups" class="category-card" data-aos="fade-up" data-aos-delay="200">
-                        <img src="img/mixed-groups.jpg" alt="Смешанные группы" class="category-card__img">
-                        <h3 class="category-card__title">Смешанные группы</h3>
-                    </a>
-                    <a href="#solo" class="category-card" data-aos="fade-up" data-aos-delay="300">
-                        <img src="img/solo-artists.jpg" alt="Сольные исполнители" class="category-card__img">
-                        <h3 class="category-card__title">Сольные исполнители</h3>
-                    </a>
-                </div>
+        <!-- New arrivals: Photo cards -->
+        <section class="new-arrivals-section">
+            <div class="new-arrivals-text">
+                <h2>Новые поступления. Фотокарточки</h2>
+                <p>
+                    Обновленный раздел с фотокарточками. Найти свою любимую карточку стало еще удобнее и быстрее.<br>
+                    Мы тщательно упаковываем каждую фотокарточку: протектор, переплетный картон и конверт с пупырчатой пленкой — чтобы всё было в идеальном состоянии.
+                </p>
+                <a href="catalog.html?category=photocards" class="photo-cards-btn">Перейти к фотокарточкам</a>
+            </div>
+            <div class="new-arrivals-images">
+                <img src="img/фотокарточки.jpg" alt="Фотокарточка 1">
+                <img src="img/фотокарточки1.jpg" alt="Фотокарточка 2">
             </div>
         </section>
 
-        <section id="male-groups" class="popular-groups">
-            <div class="container">
-                <h2 class="section-title">Популярные мужские группы</h2>
-                <div class="groups-slider swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide group-card" data-aos="zoom-in">
-                            <img src="img/bts.webp" alt="BTS" class="group-card__img">
-                            <h3 class="group-card__title">BTS</h3>
-                            <a href="catalog.html?group=bts" class="btn btn--primary">Смотреть товары</a>
-                        </div>
-                        <div class="swiper-slide group-card" data-aos="zoom-in">
-                            <img src="img/stray_kids.jpg" alt="Stray Kids" class="group-card__img">
-                            <h3 class="group-card__title">Stray Kids</h3>
-                            <a href="catalog.html?group=stray-kids" class="btn btn--primary">Смотреть товары</a>
-                        </div>
-                        <div class="swiper-slide group-card" data-aos="zoom-in">
-                            <img src="img/ateez.jpg" alt="ATEEZ" class="group-card__img">
-                            <h3 class="group-card__title">ATEEZ</h3>
-                            <a href="catalog.html?group=ateez" class="btn btn--primary">Смотреть товары</a>
-                        </div>
-                        <div class="swiper-slide group-card" data-aos="zoom-in">
-                            <img src="img/enhance.jpg" alt="ENHANCE" class="group-card__img">
-                            <h3 class="group-card__title">ENHANCE</h3>
-                            <a href="catalog.html?group=enhance" class="btn btn--primary">Смотреть товары</a>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
+        <!-- Marquee / running line -->
+        <div class="marquee-section">
+            <div class="marquee-content">
+                🎁 Подарки к любому заказу &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; Бонусы за покупку &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; Надежная упаковка &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; 🎁 Подарки к любому заказу &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; Бонусы за покупку &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; Надежная упаковка &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
             </div>
-        </section>
+        </div>
 
-        <section id="female-groups" class="popular-groups">
-            <div class="container">
-                <h2 class="section-title">Популярные женские группы</h2>
-                <div class="groups-slider swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide group-card" data-aos="zoom-in">
-                            <img src="img/blackpink.jpg" alt="BLACKPINK" class="group-card__img">
-                            <h3 class="group-card__title">BLACKPINK</h3>
-                            <a href="catalog.html?group=blackpink" class="btn btn--primary">Смотреть товары</a>
-                        </div>
-                        <div class="swiper-slide group-card" data-aos="zoom-in">
-                            <img src="img/twice.jpg" alt="TWICE" class="group-card__img">
-                            <h3 class="group-card__title">TWICE</h3>
-                            <a href="catalog.html?group=twice" class="btn btn--primary">Смотреть товары</a>
-                        </div>
-                        <div class="swiper-slide group-card" data-aos="zoom-in">
-                            <img src="img/red-velvet.jpg" alt="Red Velvet" class="group-card__img">
-                            <h3 class="group-card__title">Red Velvet</h3>
-                            <a href="catalog.html?group=red-velvet" class="btn btn--primary">Смотреть товары</a>
-                        </div>
-                        <div class="swiper-slide group-card" data-aos="zoom-in">
-                            <img src="img/ive.jpg" alt="IVE" class="group-card__img">
-                            <h3 class="group-card__title">IVE</h3>
-                            <a href="catalog.html?group=ive" class="btn btn--primary">Смотреть товары</a>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
+        <!-- Subscribe block -->
+        <section class="subscribe-section">
+            <div class="subscribe-text">
+                <h3>Подпишитесь на рассылку</h3>
+                <p>Узнавайте первыми о новых поступлениях, акциях и специальных предложениях! Мы не рассылаем спам и не передаем ваши данные третьим лицам.</p>
             </div>
+            <form class="subscribe-form" action="#" method="post" onsubmit="event.preventDefault(); alert('Спасибо за подписку!');">
+                <input type="email" name="email" placeholder="Ваш e-mail" required>
+                <button type="submit">Подписаться</button>
+            </form>
         </section>
-
     </main>
     <footer>
         <div class="footer__container">
             <div class="footer__column">
                 <div class="footer__logo">
-                    <img src="img/Chosen Ones1.png" alt="Chosen Ones logo">
+                    <img src="img/Chosen-Ones1.svg" alt="Chosen Ones logo">
                     <p class="copyright">© Chosen Ones 2025</p>
                 </div>
             </div>
@@ -184,15 +169,16 @@
                 <ul class="footer__list">
                     <li><a href="mailto:info@chosenones.com"><i class="bi bi-envelope"></i> info@chosenones.com</a></li>
                     <li><a href="tel:+78001234567"><i class="bi bi-telephone"></i> 8 (800) 123-45-67</a></li>
-                    <div class="footer__social">
-                        <a href="#" class="social-icon"><i class="bi bi-vk"></i></a>
-                        <a href="#" class="social-icon"><i class="bi bi-telegram"></i></a>
-                        <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
-                    </div>
+                    <li class="footer__social">
+                        <a href="#" class="social-icon" aria-label="Whatsapp"><i class="bi bi-whatsapp"></i></i></a>
+                        <a href="#" class="social-icon" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+                        <a href="#" class="social-icon" aria-label="Youtube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </li>
                 </ul>
             </div>
         </div>
-
     </footer>
 </body>
 </html>

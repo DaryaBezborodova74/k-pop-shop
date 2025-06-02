@@ -383,6 +383,7 @@ main {
     padding-bottom: 15px;
     border-radius: 10px;
     font-weight: bold;
+    margin-bottom: 15px;
 }
 
 .btn--secondary:hover {
@@ -589,6 +590,10 @@ h1 {
     padding-top: 10px;
 }
 
+.quantity-controls-plus {
+    gap: 5px;
+}
+
 .quantity-btn {
     padding: 5px 12px;
     border: 1px solid #ddd;
@@ -596,6 +601,11 @@ h1 {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.quantity-btn:hover,
+.quantity-btn:active {
+    background-color: rgb(214, 214, 214);
+} 
 
 .quantity-input {
     width: 50px;
@@ -610,6 +620,11 @@ h1 {
     background: none;
     border: none;
     cursor: pointer;
+}
+
+.remove-item:hover,
+.remove-item:active {
+    color: #a71462;
 }
 
 .promo-code {
@@ -747,6 +762,11 @@ h1 {
     font-size: 1.1rem;
     font-weight: bold;
     border: none;
+}
+
+.checkout-btn__oneclick:hover,
+.checkout-btn__oneclick:active {
+    background-color: #a71462;
 }
 
 
@@ -928,7 +948,7 @@ dialog::backdrop {
 }
 
 .submit-btn:hover {
-    background-color: #d4388a;
+    background-color: #a71462;
 }
 
 .closeDialogBtn {
