@@ -187,7 +187,7 @@ h3 {
 
 .catalog__rest {
     color: var(--color-magenta);
-    font-weight: 0.8rem ;
+    font-weight: 0.8rem;
 }
 
 .catalog__brand {
@@ -959,7 +959,7 @@ input[type=range].filter-price__slider::-ms-fill-lower {
     padding-top: 2px;
     padding-bottom: 2px;
     right: -10px;
-    top: -3 ;
+    top: -3;
 }
 
 /*-----------------------filter panel-------------------*/
